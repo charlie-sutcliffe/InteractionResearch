@@ -3,7 +3,10 @@ guid: 63eebee1ea8344a4aa52e5d812b02b50
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - BulletTemplate: {fileID: 8224092894618339238, guid: 097b6915de4684b2c9f8455c180e1648, type: 3}
+  - trigger: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  - gunShotSFX: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
