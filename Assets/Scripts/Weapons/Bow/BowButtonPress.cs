@@ -38,10 +38,8 @@ public class BowButtonPress : MonoBehaviour
         }
         // Instantiate the arrow at the spawn point
         GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.transform.position, arrowSpawnPoint.transform.rotation);
-        // Get the arrow's Rigidbody component
-        Rigidbody rb = arrow.GetComponent<Rigidbody>();
-        // Apply force to the arrow
-        rb.AddForce(arrowSpawnPoint.transform.forward * arrowForce, ForceMode.Impulse);
+        // Get the arrow's Rigidbody component and apply force to the arrow
+        arrow.GetComponent<Rigidbody>().AddForce(arrow.transform.forward * arrowForce, ForceMode.Force);
 
         // Optional: Add haptic feedback
         foreach (var interactable in grabInteractable.interactorsSelecting)
