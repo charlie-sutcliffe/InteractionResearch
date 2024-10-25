@@ -15,10 +15,16 @@ public class DrawInteraction : XRBaseInteractable
     private LineRenderer _lineRenderer;
     private IXRSelectInteractor pullingInteractor = null;
 
+    // SFX
+    private AudioSource bowDrawSFX;
+    private bool isPlayingSound = false;
+
     protected override void Awake() 
     {
         base.Awake();
         _lineRenderer = GetComponent<LineRenderer>();
+
+        bowDrawSFX = GetComponent<AudioSource>();
     }
     public void SetPullInteractor(SelectEnterEventArgs args)
     {
@@ -30,7 +36,7 @@ public class DrawInteraction : XRBaseInteractable
         pullingInteractor = null;
         PullAmount = 0f;
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, 0f);
-        UpdateString(); 
+        UpdateString();
     }
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
@@ -42,6 +48,8 @@ public class DrawInteraction : XRBaseInteractable
                 Vector3 pullPosition = pullingInteractor.transform.position;
                 PullAmount = CalculatePull(pullPosition);
                 UpdateString();
+
+                HapticFeedback();
             }
         }
     }
@@ -62,5 +70,33 @@ public class DrawInteraction : XRBaseInteractable
         Vector3 stringPosition = Vector3.forward * Mathf.Lerp(start.transform.localPosition.z, end.transform.localPosition.z, PullAmount);
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, stringPosition.z + 0.2f);
         _lineRenderer.SetPosition(1, stringPosition);
+
+        
+    }
+
+    private void HapticFeedback()
+    {
+        // SFX
+        // FIX sound only playing when string is released
+        if (PullAmount > 0.5f && !isPlayingSound)
+        {
+            PlayDrawSound();
+            isPlayingSound = true;
+        }
+        else if (PullAmount < 0.5f && isPlayingSound)
+        {
+            bowDrawSFX.Stop();
+            isPlayingSound = false;
+        }
+        // Haptic feedback implementation
+        if (pullingInteractor is XRBaseControllerInteractor controllerInteractor)
+        {
+            controllerInteractor.SendHapticImpulse(PullAmount, 0.1f);
+        }
+    }
+
+    private void PlayDrawSound()
+    {
+        bowDrawSFX.Play();
     }
 }

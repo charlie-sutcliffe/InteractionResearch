@@ -10,11 +10,18 @@ public class ArrowNocker: MonoBehaviour
     private XRGrabInteractable _bow;
     private bool _arrowNocked = false;
     private GameObject _currentArrow = null;
+
+    // SFX
+    private AudioSource arrowNockSFX;
     
     // Start is called before the first frame update
     void Start()
     {
         _bow = GetComponent<XRGrabInteractable>();
+
+        // SFX
+        arrowNockSFX = GetComponent<AudioSource>();
+        
         DrawInteraction.PullActionReleased += NotchEmpty;
     }
     private void OnDestroy()
@@ -48,5 +55,14 @@ public class ArrowNocker: MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         _currentArrow = Instantiate(arrow, notch.transform);
+
+        // SFX
+        PlayNockSound();
+    }
+
+    // SFX
+    private void PlayNockSound()
+    {
+        arrowNockSFX.Play();
     }
 }
