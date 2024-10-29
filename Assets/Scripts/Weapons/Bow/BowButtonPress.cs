@@ -37,17 +37,6 @@ public class BowButtonPress : MonoBehaviour
             return;
         }
         
-        // Check that player is holding the bow
-        if (!grabInteractable.isSelected)
-        {
-            return;
-        }
-        else {
-        // Instantiate the arrow at the spawn point
-        GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.transform.position, arrowSpawnPoint.transform.rotation);
-        // Get the arrow's Rigidbody component and apply force to the arrow
-        arrow.GetComponent<Rigidbody>().AddForce(arrow.transform.forward * arrowForce, ForceMode.Force);
-        }
 
         // Optional: Add haptic feedback
         foreach (var interactable in grabInteractable.interactorsSelecting)
