@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: a2ba44019e2a540deb4507337c25a844
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bow_n_ArrowScene.unity
     guid: cf6bd7251c811964a82865c938e537af
+  - enabled: 1
+    path: Assets/Scenes/Slingshot.unity
+    guid: 3bf9dab08655f44fdb4f3e8db12a8979
+  - enabled: 0
+    path: Assets/Scenes/Boomerang.unity
+    guid: 0be52b8cda7694d7c913c18e64b6200a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: eb84867302ed045349bae371346a3123, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e592d543fd42b4c97a11ac8d978280ca, type: 2}
