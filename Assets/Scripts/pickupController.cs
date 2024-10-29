@@ -104,7 +104,7 @@ public class pickupController : MonoBehaviour
         heldObj = null;
     }
 
-    void ThrowObject()
+   void ThrowObject()
     {
         throwObject = heldObj;
 
@@ -117,9 +117,39 @@ public class pickupController : MonoBehaviour
 
         rotation = gameObject.transform.forward;
 
-        //Debug.Log(throwObject);
+        // Reset velocity and apply throw force
+        throwObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        throwObject.GetComponent<Rigidbody>().AddForce(rotation * throwForce, ForceMode.VelocityChange);
 
-        throwObject.GetComponent<Rigidbody>().velocity = new UnityEngine.Vector3(0, 0, 0);
-        throwObject.GetComponent<Rigidbody>().AddForce(rotation * throwForce);
+        // Start coroutine to return the object after a delay
+        StartCoroutine(ReturnToPlayerCoroutine());
     }
+    
+    [SerializeField] float returnDelay = 2.0f; // Delay before return starts
+    [SerializeField] float returnSpeed = 5.0f; // Speed at which object returns
+
+    private IEnumerator ReturnToPlayerCoroutine()
+    {
+        // Wait for the specified delay before starting return
+        yield return new WaitForSeconds(returnDelay);
+
+        // Check if throwObject is still active (in case it was grabbed again)
+        if (throwObject != null)
+        {
+            Rigidbody throwObjRB = throwObject.GetComponent<Rigidbody>();
+
+            // Move towards holdArea
+            while (Vector3.Distance(throwObject.transform.position, holdArea.position) > 0.1f)
+            {
+                Vector3 returnDirection = (holdArea.position - throwObject.transform.position).normalized;
+                throwObjRB.velocity = returnDirection * returnSpeed;
+                yield return null; // Continue in the next frame
+            }
+
+            // Reset velocity and make the object "held" again
+            throwObjRB.velocity = Vector3.zero;
+            PickupObject(throwObject);
+        }
+    }
+
 }

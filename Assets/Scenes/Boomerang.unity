@@ -236,6 +236,8 @@ MonoBehaviour:
   pickupForce: 150
   trigger: {fileID: 0}
   throwForce: 30
+  returnDelay: 2
+  returnSpeed: 5
 --- !u!1 &405841594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1434,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -1671,6 +1673,7 @@ GameObject:
   - component: {fileID: 1487709116}
   - component: {fileID: 1487709115}
   - component: {fileID: 1487709114}
+  - component: {fileID: 1487709117}
   m_Layer: 0
   m_Name: boomerang
   m_TagString: Throwable
@@ -1743,6 +1746,20 @@ Transform:
   - {fileID: 1764518484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487709117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487709113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b5bc7a19587a4f46bc894366e878078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: {x: 0, y: -1500, z: 0}
+  requiredSpeed: 2
 --- !u!1 &1647731020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,7 +1983,6 @@ GameObject:
   - component: {fileID: 1845432819}
   - component: {fileID: 1845432818}
   - component: {fileID: 1845432817}
-  - component: {fileID: 1845432821}
   - component: {fileID: 1845432822}
   m_Layer: 0
   m_Name: RightHand Controller
@@ -2602,22 +2618,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
---- !u!114 &1845432821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845432815}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63eebee1ea8344a4aa52e5d812b02b50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BulletTemplate: {fileID: 0}
-  shootPower: 100
-  trigger: {fileID: 0}
-  gunShotSFX: {fileID: 0}
 --- !u!114 &1845432822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,10 +2631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdArea: {fileID: 394327951}
-  pickupRange: 5
-  pickupForce: 150
+  pickupRange: 10
+  pickupForce: 200
   trigger: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  throwForce: 1500
+  throwForce: 25
+  returnDelay: 0.75
+  returnSpeed: 20
 --- !u!1001 &2001260104
 PrefabInstance:
   m_ObjectHideFlags: 0
