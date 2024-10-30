@@ -4,20 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/// <summary>
+/// Manages the pulling and releasing of the bowstring, supporting multiple interaction methods.
+/// </summary>
 public class DrawInteraction : XRBaseInteractable
 { 
     public static event Action<float> PullActionReleased;
 
-    public Transform start, end;
-    public GameObject notch;
+    [Header("Bowstring Settings")]
+    public Transform start, end; // Starting and ending points of bowstring
+    public GameObject notch; // Notch where the arrow is nocked
+
+    [Header("Pull Settings")]
+    [Tooltip("Maximum pull distance as a normalized value (0 to 1).")]
+    public float maxPull = 1.0f;
     public float PullAmount { get; private set; } = 0.0f;
 
-    private LineRenderer _lineRenderer;
-    private IXRSelectInteractor pullingInteractor = null;
-
     // SFX
+    [Header("Audio Settings")]
+    [Tooltip("AudioSource for bow drawing sound.")]
     private AudioSource bowDrawSFX;
     private bool isPlayingSound = false;
+
+    // VFX
+    private LineRenderer _lineRenderer;
+    private IXRSelectInteractor pullingInteractor = null;
 
     protected override void Awake() 
     {
@@ -26,17 +37,47 @@ public class DrawInteraction : XRBaseInteractable
 
         bowDrawSFX = GetComponent<AudioSource>();
     }
-    public void SetPullInteractor(SelectEnterEventArgs args)
+    
+    /// <summary>
+    /// Handles external release triggers.
+    /// </summary>
+    /// <param name="maxPull">Maximum pull distance.</param>
+    private void OnPullActionReleased(float maxPull)
     {
-        pullingInteractor = args.interactorObject;
+        PullAmount = maxPull;
+        Release();
     }
-    public void Release()
+
+    /// <summary>
+    /// Public method to allow external scripts to set pull and release the bow.
+    /// </summary>
+    /// <param name="maxPull">Normalized pull amount (0 to 1).</param>
+    public void ExternalRelease(float maxPull)
+    {
+        PullAmount = maxPull;
+        Release();
+    }
+
+    /// <summary>
+    /// Releases the bowstring, triggering the arrow's flight.
+    /// </summary>
+    /// <param name="PullAmount">Normalized pull amount (0 to 1).</param>
+    private void Release()
     {
         PullActionReleased?.Invoke(PullAmount);
         pullingInteractor = null;
         PullAmount = 0f;
         notch.transform.localPosition = new Vector3(notch.transform.localPosition.x, notch.transform.localPosition.y, 0f);
         UpdateString();
+    }
+
+    /// <summary>
+    /// Sets the current interactor that is pulling the bowstring.
+    /// </summary>
+    /// <param name="args">SelectEnterEventArgs containing interactor information.</param>
+    public void SetPullInteractor(SelectEnterEventArgs args)
+    {
+        pullingInteractor = args.interactorObject;
     }
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
     {
@@ -54,6 +95,11 @@ public class DrawInteraction : XRBaseInteractable
         }
     }
 
+    /// <summary>
+    /// Calculates the normalized pull amount based on interactor's position.
+    /// </summary>
+    /// <param name="pullPosition">Current position of the pulling interactor.</param>
+    /// <returns>Normalized pull amount (0 to 1).</returns>
     private float CalculatePull(Vector3 pullPosition)
     {
         Vector3 pullDirection = pullPosition - start.position;
@@ -65,6 +111,9 @@ public class DrawInteraction : XRBaseInteractable
         return Mathf.Clamp(pullLength, 0, 1);
     }
 
+    /// <summary>
+    /// Updates the visual representation of the bowstring.
+    /// </summary>    
     private void UpdateString()
     {
         Vector3 stringPosition = Vector3.forward * Mathf.Lerp(start.transform.localPosition.z, end.transform.localPosition.z, PullAmount);
@@ -74,6 +123,9 @@ public class DrawInteraction : XRBaseInteractable
         
     }
 
+    /// <summary>
+    /// Provides haptic and audio feedback based on pull amount.
+    /// </summary>    
     private void HapticFeedback()
     {
         // SFX
@@ -95,6 +147,9 @@ public class DrawInteraction : XRBaseInteractable
         }
     }
 
+    /// <summary>
+    /// Plays the bow drawing sound.
+    /// </summary>
     private void PlayDrawSound()
     {
         bowDrawSFX.Play();
