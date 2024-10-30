@@ -2,49 +2,48 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Handles bow firing via button presses.
+/// </summary>
 public class BowButtonPress : MonoBehaviour
 {
-    public InputActionReference fireAction; // Assign in Inspector
-    public GameObject arrowPrefab;
-    public GameObject arrowSpawnPoint;
-    public float arrowForce = 20f;
+    [Header("Input Settings")]
+    [Tooltip("Input action for firing the bow.")]
+    public InputActionProperty fireAction; // Assign in Inspector
 
-    private XRGrabInteractable grabInteractable;
+    [Header("Bow Interaction")]
+    [Tooltip("Reference to the DrawInteraction script.")]
+    public DrawInteraction drawInteraction;
 
-    private void Awake()
-    {
-        grabInteractable = GetComponent<XRGrabInteractable>();
-    }
-
+    [Header("Pull Settings")]
+    [Tooltip("Default pull amount when firing via button press.")]
+    [Range(0.0f, 1.0f)]
+    public float defaultPullAmount = 3.0f;
     private void OnEnable()
     {
         fireAction.action.Enable();
-        fireAction.action.performed += FireArrow;
+        fireAction.action.performed += OnFireButtonPressed;
     }
 
     private void OnDisable()
     {
-        fireAction.action.performed -= FireArrow;
+        fireAction.action.performed -= OnFireButtonPressed;
         fireAction.action.Disable();
     }
 
-    private void FireArrow(InputAction.CallbackContext context)
+    /// <summary>
+    /// Fires the bow when the fire action is performed.
+    /// </summary>
+    /// <param name="context">Input action context.</param>
+    private void OnFireButtonPressed(InputAction.CallbackContext context)
     {
-        // Get the arrow prefab and spawn point
-        if (arrowPrefab == null || arrowSpawnPoint == null)
+        // Check that the bow object is being held
+        if (drawInteraction.isSelected)
         {
-            Debug.LogError("Arrow prefab or spawn point not assigned in BowButtonPress script.");
-            return;
+            // Release the bow with the default pull amount
+            drawInteraction.ExternalRelease(defaultPullAmount);
         }
-        
 
-        // Optional: Add haptic feedback
-        foreach (var interactable in grabInteractable.interactorsSelecting)
-        {
-            if (interactable is XRBaseControllerInteractor controllerInteractor)
-            {
-                controllerInteractor.xrController.SendHapticImpulse(0.5f, 0.1f);
-            }
-        }
+        // Optionally, add haptic feedback or other effects
     }
 }
