@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: a2ba44019e2a540deb4507337c25a844
   - enabled: 1
@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Boomerang.unity
     guid: 3bf9dab08655f44fdb4f3e8db12a8979
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ButtonPress.unity
     guid: 0be52b8cda7694d7c913c18e64b6200a
   m_configObjects:
