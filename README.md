@@ -53,68 +53,67 @@ Our research aimed to understand how different interaction methods affect user e
 
 1.  **Are you familiar with traditional button actuated weapons?**
 
-    - This question aims to gauge participants' familiarity with traditional video game weapons that are activated using button inputs. This will help us understand the baseline for our study.
-      -Participant 1: Yes
-      -Participant 2: Yes
-      -Participant 3: Yes
-      -Participant 4: Yes
-      -Participant 5: Yes
+- This question aims to gauge participants' familiarity with traditional video game weapons that are activated using button inputs. This will help us understand the baseline for our study.
+  -Participant 1: Yes
+  -Participant 2: Yes
+  -Participant 3: Yes
+  -Participant 4: Yes
+  -Participant 5: Yes
 
 2.  **Have you used motion actuated weapons in VR before?**
 
-    - This question seeks to determine if participants have experience with motion-controlled weapons in VR environments. This will help us understand their prior exposure to similar interactions.
-      -Participant 1: Yes
-      -Participant 2: Yes
-      -Participant 3: Yes
-      -Participant 4: Yes
-      -Participant 5: No
+- This question seeks to determine if participants have experience with motion-controlled weapons in VR environments. This will help us understand their prior exposure to similar interactions.
+- Participant 1: Yes
+- Participant 2: Yes
+- Participant 3: Yes
+- Participant 4: Yes
+- Participant 5: No
 
-      -**If yes to Q2: What was the weapons previously used with motion controls in VR? Why did you like (or not) it?**
-
-            -Participant 1: Yes, bow and arrow in VR game. Liked the realism and immersion.
-            -Participant 2: Yes, sword in VR game. Liked the challenge and the sense of control.
-            -Participant 3: Yes, gun in VR game. Liked the accuracy and the feeling of power.
-            -Participant 4: Yes, unreal engine game that could catch bullets and throw it back at enemies. Liked the challenge and the sense of control.
+  - **If yes to Q2: What was the weapons previously used with motion controls in VR? Why did you like (or not) it?**
+    - Participant 1: Yes, bow and arrow in VR game. Liked the realism and immersion.
+    - Participant 2: Yes, sword in VR game. Liked the challenge and the sense of control.
+    - Participant 3: Yes, gun in VR game. Liked the accuracy and the feeling of power.
+    - Participant 4: Yes, unreal engine game that could catch bullets and throw it back at enemies. Liked the challenge and the sense of control.
 
 3.  **Have you experienced synchronized audio and haptic feedback devices in VR?**
 
-    - This question aims to understand participants' familiarity with devices that provide synchronized audio and haptic feedback in VR environments. This will help us gauge their experience with immersive technologies.
-      -Participant 1: Yes
-      -Participant 2: No
-      -Participant 3: Yes
-      -Participant 4: Yes
-      -Participant 5: No, but has in traditional video games.
+- This question aims to understand participants' familiarity with devices that provide synchronized audio and haptic feedback in VR environments. This will help us gauge their experience with immersive technologies.
+- Participant 1: Yes
+- Participant 2: No
+- Participant 3: Yes
+- Participant 4: Yes
+- Participant 5: No, but has in traditional video games.
 
 ## Follow-up Questions:
 
 1. **Which style of weapons handling worked best for you?**
 
-   -Participant 1: Boomerang felt the best.
-   -Participant 2: Bow and arrow.
-   -Participant 3: In comparison, boomerang point and shoot felt weird. Bow and arrow felt the best.
-   -Participant 4: Bow with haptic and audio feedback.
-   -Participant 5: Bow with audio and haptic feedback, more immersive.
+   - Participant 1: Boomerang felt the best.
+   - Participant 2: Bow and arrow.
+   - Participant 3: In comparison, boomerang point and shoot felt weird. Bow and arrow felt the best.
+   - Participant 4: Bow with haptic and audio feedback.
+   - Participant 5: Bow with audio and haptic feedback, more immersive.
 
 2. **What did you like most about the weapons handling?**
 
-   -Participant 1: The realism of the boomerang.
-   -Participant 2: The accuracy of the bow and arrow.
-   -Participant 3: The haptic feedback on the bowstring.
-   -Participant 4: The haptic feedback on the bowstring.
-   -Participant 5: The immersive experience with audio and haptic feedback.
+   - Participant 1: The realism of the boomerang.
+   - Participant 2: The accuracy of the bow and arrow.
+   - Participant 3: The haptic feedback on the bowstring.
+   - Participant 4: The haptic feedback on the bowstring.
+   - Participant 5: The immersive experience with audio and haptic feedback.
 
 3. **Which interaction methods are most intuitive and user-friendly for each weapon type?**
 
-   -Participant 1: All felt intuitive. Wanted more range of motion for the bowstring.
-   -Participant 2: Throwing balls felt less intuitive, especially without mass haptic.
-   -Participant 3: Bow with sound for bowstring. Wishes controller did not have interactions for both shooting and throwing balls; heavy balls felt very hard to throw.
-   -Participant 4: Boomerang with point and shoot felt not intuitive because boomerangs are throwing objects IRL. Point and shoot felt intuitive for projectiles.
-   -Participant 5: Bow movements felt very intuitive.
+   - Participant 1: All felt intuitive. Wanted more range of motion for the bowstring.
+   - Participant 2: Throwing balls felt less intuitive, especially without mass haptic.
+   - Participant 3: Bow with sound for bowstring. Wishes controller did not have interactions for both shooting and throwing balls; heavy balls felt very hard to throw.
+   - Participant 4: Boomerang with point and shoot felt not intuitive because boomerangs are throwing objects IRL. Point and shoot felt intuitive for projectiles.
+   - Participant 5: Bow movements felt very intuitive.
 
 4. **Which interactions felt the more useful for weapons handling in other VR applications?**
 
-   -Participant 1: Boomerang felt the most useful. Would like more control of the throwing motion.
-   -Participant 2: Bow; haptic feedback made it feel the most realistic of all the interactions
-   -Participant 3: Grab and throw felt applicable. But also pull, holding and releasing at the right time feels amazing
-   -Participant 4: Point and shoot applies to many objects and actions. But bow and arrow feels the best to use in VR.
-   -Participant 5: Exclusively throwing objects.
+   - Participant 1: Boomerang felt the most useful. Would like more control of the throwing motion.
+   - Participant 2: Bow; haptic feedback made it feel the most realistic of all the interactions
+   - Participant 3: Grab and throw felt applicable. But also pull, holding and releasing at the right time feels amazing
+   - Participant 4: Point and shoot applies to many objects and actions. But bow and arrow feels the best to use in VR.
+   - Participant 5: Exclusively throwing objects.
