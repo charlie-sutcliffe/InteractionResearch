@@ -8,10 +8,11 @@ In this project, we explored various methods for implementing weapon handling an
 
 1. **Drawing a Bow and Shooting an Arrow**
 
-   - Users will have the experience of pulling back a virtual bowstring and aiming an arrow, with distinct versions implemented using different combinations of haptic and sonic feedback 
+   - Users will have the experience of pulling back a virtual bowstring and aiming an arrow, with distinct versions implemented using different combinations of haptic and sonic feedback
 
 2. **Ball Throwing and Shooting**
-   - Users will have a "player shoot" ability similar to what we had in the Time and Space project. They will also be able to pick up and throw balls of various sizes and weights, with larger balls being heavier. 
+
+   - Users will have a "player shoot" ability similar to what we had in the Time and Space project. They will also be able to pick up and throw balls of various sizes and weights, with larger balls being heavier.
 
 3. **Throwing and catching a Boomerang**
 
@@ -50,40 +51,39 @@ Our research aimed to understand how different interaction methods affect user e
 
 ### Preliminary Research Questions
 
-1. **Are you familiar with traditional button actuated weapons?**
+1.  **Are you familiar with traditional button actuated weapons?**
 
-   - This question aims to gauge participants' familiarity with traditional video game weapons that are activated using button inputs. This will help us understand the baseline for our study.
-     -Participant 1: Yes
-     -Participant 2: Yes
-     -Participant 3: Yes
-     -Participant 4: Yes
-     -Participant 5: Yes
+    - This question aims to gauge participants' familiarity with traditional video game weapons that are activated using button inputs. This will help us understand the baseline for our study.
+      -Participant 1: Yes
+      -Participant 2: Yes
+      -Participant 3: Yes
+      -Participant 4: Yes
+      -Participant 5: Yes
 
-2. **Have you used motion actuated weapons in VR before?**
+2.  **Have you used motion actuated weapons in VR before?**
 
-   - This question seeks to determine if participants have experience with motion-controlled weapons in VR environments. This will help us understand their prior exposure to similar interactions.
-     -Participant 1: Yes
-     -Participant 2: Yes
-     -Participant 3: Yes
-     -Participant 4: Yes
-     -Participant 5: No
+    - This question seeks to determine if participants have experience with motion-controlled weapons in VR environments. This will help us understand their prior exposure to similar interactions.
+      -Participant 1: Yes
+      -Participant 2: Yes
+      -Participant 3: Yes
+      -Participant 4: Yes
+      -Participant 5: No
 
-   -**If yes to Q2:**
-   -What was the weapons previously used with motion controls in VR? Why did you like (or not) it?
+      -**If yes to Q2: What was the weapons previously used with motion controls in VR? Why did you like (or not) it?**
 
-   -Participant 1: Yes, bow and arrow in VR game. Liked the realism and immersion.
-   -Participant 2: Yes, sword in VR game. Liked the challenge and the sense of control.
-   -Participant 3: Yes, gun in VR game. Liked the accuracy and the feeling of power.
-   -Participant 4: Yes, unreal engine game that could catch bullets and throw it back at enemies. Liked the challenge and the sense of control.
+            -Participant 1: Yes, bow and arrow in VR game. Liked the realism and immersion.
+            -Participant 2: Yes, sword in VR game. Liked the challenge and the sense of control.
+            -Participant 3: Yes, gun in VR game. Liked the accuracy and the feeling of power.
+            -Participant 4: Yes, unreal engine game that could catch bullets and throw it back at enemies. Liked the challenge and the sense of control.
 
-3. **Have you experienced synchronized audio and haptic feedback devices in VR?**
+3.  **Have you experienced synchronized audio and haptic feedback devices in VR?**
 
-- This question aims to understand participants' familiarity with devices that provide synchronized audio and haptic feedback in VR environments. This will help us gauge their experience with immersive technologies.
-  -Participant 1: Yes
-  -Participant 2: No
-  -Participant 3: Yes
-  -Participant 4: Yes
-  -Participant 5: No, but has in traditional video games.
+    - This question aims to understand participants' familiarity with devices that provide synchronized audio and haptic feedback in VR environments. This will help us gauge their experience with immersive technologies.
+      -Participant 1: Yes
+      -Participant 2: No
+      -Participant 3: Yes
+      -Participant 4: Yes
+      -Participant 5: No, but has in traditional video games.
 
 ## Follow-up Questions:
 
