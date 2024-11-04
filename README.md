@@ -54,11 +54,11 @@ Our research aimed to understand how different interaction methods affect user e
 1.  **Are you familiar with traditional button actuated weapons?**
 
 - This question aims to gauge participants' familiarity with traditional video game weapons that are activated using button inputs. This will help us understand the baseline for our study.
-  -Participant 1: Yes
-  -Participant 2: Yes
-  -Participant 3: Yes
-  -Participant 4: Yes
-  -Participant 5: Yes
+- Participant 1: Yes
+- Participant 2: Yes
+- Participant 3: Yes
+- Participant 4: Yes
+- Participant 5: Yes
 
 2.  **Have you used motion actuated weapons in VR before?**
 
@@ -69,11 +69,11 @@ Our research aimed to understand how different interaction methods affect user e
 - Participant 4: Yes
 - Participant 5: No
 
-  - **If yes to Q2: What was the weapons previously used with motion controls in VR? Why did you like (or not) it?**
-    - Participant 1: Yes, bow and arrow in VR game. Liked the realism and immersion.
-    - Participant 2: Yes, sword in VR game. Liked the challenge and the sense of control.
-    - Participant 3: Yes, gun in VR game. Liked the accuracy and the feeling of power.
-    - Participant 4: Yes, unreal engine game that could catch bullets and throw it back at enemies. Liked the challenge and the sense of control.
+- **If yes to Q2: What was the weapons previously used with motion controls in VR? Why did you like (or not) it?**
+  - Participant 1: Yes, bow and arrow in VR game. Liked the realism and immersion.
+  - Participant 2: Yes, sword in VR game. Liked the challenge and the sense of control.
+  - Participant 3: Yes, gun in VR game. Liked the accuracy and the feeling of power.
+  - Participant 4: Yes, unreal engine game that could catch bullets and throw it back at enemies. Liked the challenge and the sense of control.
 
 3.  **Have you experienced synchronized audio and haptic feedback devices in VR?**
 
