@@ -4,6 +4,19 @@
 
 In this project, we explored various methods for implementing weapon handling and firing interactions within a VR environment. By developing and testing different interaction styles, we aimed to understand how each version influences user experience and usability. We simulated interactions for the following weapons: a bow and an arrow, a boomerang, and projectiles. Each interaction was implemented using multiple techniques to assess their impact on engagement and realism.
 
+## Interaction Types and Implementations
+
+1. **Drawing a Bow and Shooting an Arrow**
+
+   - Users will have the experience of pulling back a virtual bowstring and aiming an arrow, with distinct versions implemented using different combinations of haptic and sonic feedback 
+
+2. **Ball Throwing and Shooting**
+   - Users will have a "player shoot" ability similar to what we had in the Time and Space project. They will also be able to pick up and throw balls of various sizes and weights, with larger balls being heavier. 
+
+3. **Throwing and catching a Boomerang**
+
+   - Users will be able to throw and catch a virtual boomerang through button presses and motion tracked aiming
+
 ## Interaction Variants
 
 Each weapon interaction was implemented in the following five distinct ways to gain insights into how each method influences the user experience:
